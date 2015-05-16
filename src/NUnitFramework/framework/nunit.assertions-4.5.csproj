@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00D07937-0A1A-4252-B940-993A879DB63D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NUnit.Framework</RootNamespace>
+    <AssemblyName>nunit.assertions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NUNIT_FRAMEWORK;NUNIT_ASSERTIONS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NUNIT_FRAMEWORK</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\..\..\bin\Release\nunit.assertions.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Common\nunit\Guard.cs">
+      <Link>Guard.cs</Link>
+    </Compile>
+    <Compile Include="Assert.Comparisons.cs" />
+    <Compile Include="Assert.Conditions.cs" />
+    <Compile Include="Assert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assert.Equality.cs" />
+    <Compile Include="Assert.Exceptions.cs" />
+    <Compile Include="Assert.That.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assert.Types.cs" />
+    <Compile Include="AssertionHelper.cs" />
+    <Compile Include="Assume.cs" />
+    <Compile Include="CollectionAssert.cs" />
+    <Compile Include="Compatibility\AttributeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compatibility\Stopwatch.cs" />
+    <Compile Include="Constraints\AllItemsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\AndConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\AssignableFromConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\AssignableToConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\AttributeConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\AttributeExistsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\BinaryConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\BinarySerializableConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionContainsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionEquivalentConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionItemsEqualConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionOrderedConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionSubsetConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\CollectionTally.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ComparisonAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ComparisonConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Constraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ConstraintBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ConstraintExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ConstraintFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ConstraintResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ContainsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\DelayedConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\DictionaryContainsKeyConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\DictionaryContainsValueConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EmptyCollectionConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EmptyConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EmptyDirectoryConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EmptyStringConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EndsWithConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EqualConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EqualConstraintResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\EqualityAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ExactCountConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ExactTypeConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ExceptionTypeConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\FalseConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\FileExistsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\FileOrDirectoryExistsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\FloatingPointNumerics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\GreaterThanConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\GreaterThanOrEqualConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\IConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\InstanceOfTypeConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\IResolveConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\LessThanConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\LessThanOrEqualConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\MessageWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\MsgUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\NaNConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\NoItemConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\NotConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\NullConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Numerics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\NUnitComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\NUnitEqualityComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\AllOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\AndOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\AttributeOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\BinaryOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\CollectionOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\ConstraintOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\ExactCountOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\NoneOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\NotOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\OrOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\PrefixOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\PropOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\SelfResolvingOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\SomeOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\ThrowsOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Operators\WithOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\OrConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\PathConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\PredicateConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\PrefixConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\PropertyConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\PropertyExistsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\RangeConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\RegexConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ResolvableConstraintExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ReusableConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\SameAsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\SamePathConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\SamePathOrUnderConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\SomeItemsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\StartsWithConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\StringConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\SubPathConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\SubstringConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ThrowsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ThrowsExceptionConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ThrowsNothingConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\Tolerance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\ToleranceMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\TrueConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\TypeConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\UniqueItemsConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraints\XmlSerializableConstraint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contains.cs" />
+    <Compile Include="DirectoryAssert.cs" />
+    <Compile Include="Does.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\AssertionException.cs" />
+    <Compile Include="Exceptions\IgnoreException.cs" />
+    <Compile Include="Exceptions\InconclusiveException.cs" />
+    <Compile Include="Exceptions\ResultStateException.cs" />
+    <Compile Include="Exceptions\SuccessException.cs" />
+    <Compile Include="FileAssert.cs" />
+    <Compile Include="GlobalSettings.cs" />
+    <Compile Include="Has.cs" />
+    <Compile Include="Interfaces\ResultState.cs" />
+    <Compile Include="Interfaces\TestStatus.cs" />
+    <Compile Include="Internal\Execution\TextMessageWriter.cs" />
+    <Compile Include="Internal\StringUtil.cs" />
+    <Compile Include="Is.cs" />
+    <Compile Include="Iz.cs" />
+    <Compile Include="List.cs" />
+    <Compile Include="ListMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringAssert.cs" />
+    <Compile Include="Throws.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
